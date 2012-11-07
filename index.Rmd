@@ -1,0 +1,54 @@
+---
+title       : Slidify
+subtitle    : Stunning presentations from R Markdown
+author      : Ramnath Vaidyanathan
+job         : R Hacker
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+github:
+  user: ramnathv
+  repo: demo1
+---
+
+## Read-And-Delete
+
+1. Edit YAML front matter
+2. Write using R Markdown
+3. Use an empty line followed by three dashes to separate slides!
+
+--- .class #id 
+
+## Slide 1
+
+This is an animated list
+
+> 1. Point 1
+> 2. Point 2
+> 3. Point 3
+
+---
+
+## ggplot2
+
+```{r fig.width = 8, fig.height = 4, fig.align = 'center', message = F}
+library(ggplot2)
+qplot(wt, mpg, data = mtcars)
+```
+
+---
+
+## Motion Chart
+
+```{r echo = F, results = 'asis', message = F}
+require(googleVis)
+M1 = gvisMotionChart(Fruits, idvar = 'Fruit', timevar = 'Year')
+print(M1, tag = 'chart')
+```
+
+
+
+
+
